@@ -10,7 +10,7 @@ import geopandas as gpd
 # In[101]:
 
 
-shapefile = 'E:\\NGA_Project\\visual\\LGA_NGA.json'
+shapefile = 'dataset/LGA_NGA.json'
 gdf = gpd.read_file(shapefile)
 
 
@@ -25,7 +25,7 @@ gdf = gpd.read_file(shapefile)
 
 
 import pandas as pd
-datafile = 'E:\\NGA_Project\\0331\\MGWR_results.csv'
+datafile = 'dataset/MGWR_results.csv'
 df = pd.read_csv(datafile)
 filter = df['p_ndifgdp'].between(0,0.1)
 df1 = df[filter]
