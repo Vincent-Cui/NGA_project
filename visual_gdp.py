@@ -5,7 +5,14 @@
 
 
 import geopandas as gpd
-
+import json
+#from bokeh.io import output_notebook, show, output_file
+from bokeh.plotting import figure
+from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar
+from bokeh.palettes import brewer
+from bokeh.io import curdoc
+from bokeh.models import Slider, HoverTool
+from bokeh.layouts import widgetbox, row, column
 
 # In[101]:
 
@@ -34,14 +41,7 @@ df1 = df[filter]
 # In[105]:
 
 
-import json
-from bokeh.io import output_notebook, show, output_file
-from bokeh.plotting import figure
-from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar
-from bokeh.palettes import brewer
-from bokeh.io import curdoc, output_notebook
-from bokeh.models import Slider, HoverTool
-from bokeh.layouts import widgetbox, row, column
+
 #Define function that returns json_data for year selected by user.
     
 def json_data(selectedYear):
