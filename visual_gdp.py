@@ -61,7 +61,7 @@ palette = palette[::-1]
 #Instantiate LinearColorMapper that linearly maps numbers in a range, into a sequence of colors. Input nan_color.
 color_mapper = LinearColorMapper(palette = palette, low = 0, high = 10, nan_color = '#d9d9d9')
 #Add hover tool
-hover = HoverTool(tooltips = [ ('LGA ID','@LGA'),('GDP Coef', '@beta_ndifgdp'),('POP Coef', '@beta_ndifpop'), ('Access Coef', '@beta_MEAN_Access') ])
+hover = HoverTool(tooltips = [ ('LGA ID','@LGA'),('GDP Coef', '@beta_ndifgdp'),('POP Coef', '@beta_ndifpop'), ('Access Coef', '@beta_MEAN_Access'), ('Local R2', '@localR2') ])
 #Create color bar. 
 color_bar = ColorBar(color_mapper=color_mapper, label_standoff=8,width = 500, height = 20,
                      border_line_color=None,location = (0,0), orientation = 'horizontal')
