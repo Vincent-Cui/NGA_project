@@ -35,7 +35,10 @@ import pandas as pd
 datafile = 'dataset/MGWR_results.csv'
 df = pd.read_csv(datafile)
 filter = df['p_ndifgdp'].between(0,0.1)
-df1 = df[filter]
+filter1 = df['p_ndifgdp'].between(0,0.1)
+filter2 = df['p_ndifpop'].between(0,0.1)
+df1 = df[filter1]
+df2 = df[filter2]
 
 
 # In[105]:
