@@ -106,7 +106,7 @@ def update_plot(attr, old, new):
 slider = Slider(title = 'Year',start = 2001, end = 2015, step = 1, value = 2001)
 slider.on_change('value', update_plot)
 # Make a column layout of widgetbox(slider) and plot, and add it to the current document
-layout = row(p1,p2,widgetbox(slider))
+layout = gridplot([[p1, p2], [widgetbox(slider), None]])
 curdoc().add_root(layout)
 #Display plot inline in Jupyter notebook
 #output_notebook()
