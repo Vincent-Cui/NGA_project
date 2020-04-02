@@ -13,7 +13,7 @@ from bokeh.palettes import brewer
 from bokeh.io import curdoc
 from bokeh.models import Slider, HoverTool
 from bokeh.layouts import widgetbox, row, column
-
+from bokeh.layouts import gridplot
 # In[101]:
 
 
